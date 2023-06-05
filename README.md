@@ -1,6 +1,21 @@
 # SD-Core
 SD-Core  Af-Packet mode
 
+Firstly clone this repo:
+```bash
+git clone https://github.com/NgKore47/SD-Core.git
+```
+Then make the cord directory & clone the sd-core-helm-charts:
+```bash
+mkdir ~/cord
+cd ~/cord/
+git clone https://github.com/NgKore47/sdcore-helm-charts.git
+```
+Then do the following changes in the SD-Core directory: `cd SD-Core`
+
+**This is for the testing PLMN:00101**
+Starting by doing the following changes:
+
 #### In SD-Core_Af_Packet, we have to configure the following:
 - `~/Aether/sd-core-5g-values.yaml`
 	- use external IP for `AMF` --> same as `Data_Iface`
@@ -124,3 +139,16 @@ index b60f3b0..f11d971 100644
                  upf:
                    upf-name: "upf"  # associated UPF for this slice. One UPF per Slice. Provide fully qualified name
 ```
+
+## Deployment:
+```bash
+cd SD-Core
+ENABLE_GNBSIM=false DATA_IFACE=ens1f0 CHARTS=latest make 5g-core
+```
+
+After all the pods are up and running fine:
+Run this command:
+```bash
+sudo iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE
+```
+Here, `eno1 = Node IP`
