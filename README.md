@@ -11,6 +11,8 @@ mkdir ~/cord
 cd ~/cord/
 git clone https://github.com/NgKore47/sdcore-helm-charts.git
 ```
+## Network Architecture:
+![image](./images/SDCore-af_packet.png)
 Then do the following changes in the SD-Core directory: `cd SD-Core`
 
 **This is for the testing PLMN:00101**
