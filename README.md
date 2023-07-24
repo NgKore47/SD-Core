@@ -54,4 +54,5 @@ After all the pods are up and running fine,run this command:
 # change eno1 a/c to your setup
 sudo iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE
 ```
->NOTE: `eno1 = Node IP`
+> **Note**: 
+> `eno1 = Node IP`
