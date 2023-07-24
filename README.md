@@ -27,7 +27,7 @@ Starting by doing the following changes:
 
 > NOTE: Here is the list of all the changes that needs to be done on fresh SD-Core with Af-Packet
 
-Click [here](https://github.com/NgKore47/SD-Core/blob/main/git-diff.md) to see all the changes 
+Click [here](./git-diff.md) to see all the changes 
 
 ## Deployment:
 ```bash
