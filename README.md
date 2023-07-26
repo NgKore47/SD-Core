@@ -27,8 +27,21 @@ Starting by doing the following changes:
 
 - `~/SD-Core/sd-core-5g-values.yaml`
 	- use external IP for `AMF` --> same as `Data_Iface`
-	- ***In the `plmn`, change the `mcc`, `mnc`*** as shown below, this part is very important
-	- Also change the `plmn`(first 5 digits) from **`20893`** to **`00101`** in `imsis` section
+	- ***In the `plmn`, change the `mcc`, `mnc`*** as shown below, this part is very important:
+	
+		```
+		mcc: "001"
+		mnc: "01"
+		```
+
+	- Also change the `plmn`(first 5 digits) from **`20893`** to **`00101`** in `imsis` section:
+
+		```
+		ueId-start: "00101XXXXXXXXXX"
+    	ueId-end: "00101XXXXXXXXXX"
+        plmnId: "00101"
+		
+		```
 
 > **Note**: 
 > Here is the list of all the changes that needs to be done on fresh SD-Core with Af-Packet
