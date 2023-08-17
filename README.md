@@ -26,7 +26,7 @@ Starting by doing the following changes:
 #### In SD-Core_Af_Packet, we have to configure the following:
 
 - `~/SD-Core/sd-core-5g-values.yaml`
-	- use external IP for `AMF` --> same as `Data_Iface`
+	- use external IP for `AMF` --> can be `Data_Iface` or `Node_IP`
 	- ***In the `plmn`, change the `mcc`, `mnc`*** as shown below, this part is very important:
 	
 		```
